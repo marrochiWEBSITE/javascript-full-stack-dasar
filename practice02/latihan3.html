@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--                                                      MENGHITUNG LUAS TRAPESIUM                                                        -->
+    <!-- parseInt -->
+
+
+    <!-- membuat form input untuk mengisi nilai hasil-->
+    <hr>
+    <table>
+            <tr>
+                <td>
+                    hasil :
+                </td> 
+                <td>
+                    <form action="" name="form">
+                        <input type="text" name="tampilan">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    <hr>
+
+   
+    <script>
+            // membuat variabel garis atas
+            const ga = prompt("masukan nilai garis atas !");
+            // membuat variabel garis bawah
+            const gb =  prompt("masukan nilai garis bawah !");
+            // membuat variabel tinggi
+            const tinggi = prompt("masukan nilai untuk tinggi !");
+
+            // proses
+            const hasil = (( parseInt(ga) + parseInt (gb) ) * parseInt(tinggi)) / 2;
+
+            // output
+            document.write("LUAS TRAPESIUM <hr>");
+            document.write("nilai garis bawah : ",gb,"<br>");
+            document.write("nilai garis atas : ",ga,"<br>");
+            document.write("nilai garis atas : ",tinggi,"<br>");
+            // output tampilan
+            // artinya tampilkan form yg namanya form , classnya namanya tampilan dan valuenya tambah variabel hasil
+            document.form.tampilan.value =  document.form.tampilan.value + hasil;
+    </script>
+
+
+
+
+
+
+</body>
+</html>
