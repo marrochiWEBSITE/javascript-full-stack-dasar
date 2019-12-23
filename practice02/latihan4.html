@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- menghasilkan penilaian mahasiswa berdasarkan absen,tugas,uts,uas -->
+<script>
+    // menginput nilai nilai
+    var nama = prompt("Masukan Nama Anda :  ");
+    var jml_hdr = prompt("masukan jumlah hadir : ");
+    var nilai_tgs = prompt("Masukan nilai Tugas ");
+    var nilai_uts = prompt("Masukan Nilai Uts : ");
+    var nilai_uas = prompt("Masukan Nilai Uas ");
+
+    // diproses
+    var h_jml_hdr = parseInt(jml_hdr) * 18 / 10;
+    var h_nilaiTugas = parseInt(nilai_tgs) * 20/ 100;
+    var h_nilaiUts = parseInt(nilai_uts) * 30 / 100;
+    var h_nilaiUas = parseInt(nilai_uas) * 40 / 100;
+    var hasil = h_jml_hdr + h_nilaiTugas + h_nilaiUts + h_nilaiUas;
+
+    // output
+    document.write(hasil);   
+    document.write("nama anda : " + nama);
+    document.write("<br>");
+    document.write("jumlah kehadiran : " + jml_hdr);
+    document.write("<br>");
+    document.write("nilai tugas : " + nilai_tgs);
+    document.write("<br>");
+    document.write("nilai  uts : " + nilai_uts );
+    document.write("<br>");
+    document.write("nilai uas : " + nilai_uas);
+    document.write("<br>");
+    document.write("--------------------------------------- <br>");
+
+    document.write("nilai kehadiran " + h_jml_hdr );
+    document.write("<br>");
+    document.write("nilai tugas : " + h_nilaiTugas);
+    document.write("<br>");
+    document.write("nilai UTS : " + h_nilaiUts);
+    document.write("<br>");
+    document.write("nilai Uas : " + h_nilaiUas);
+    document.write("<br>");
+    document.write("nilai keselurahan : " + hasil);
+    document.write("<br>");
+    document.write("--------------------------------------- <br>");
+
+    // output dari hasil
+    if(hasil >= 85 ){
+        document.write("Grade A");
+    } 
+    else if(hasil >=75){
+        document.write("Grade B");
+    }
+    else if(hasil >= 65 ){
+        document.write("Grade C");
+    }
+    else if(hasil >= 55){
+        document.write("Grade D");
+    }
+    else{
+        document.write("Grade E");
+    }
+   </script>
+</body>
+</html>
