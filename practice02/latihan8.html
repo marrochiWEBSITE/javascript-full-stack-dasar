@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Membuat Kalkulator</title>
+</head>
+<body>
+
+            <script>
+                function hitung(Nilai){
+                    document.form.tampilan.value = document.form.tampilan.value+Nilai;
+                }
+                function samaDengan(){
+                    let jumlah = document.form.tampilan.value;
+                    if(jumlah){
+                        document.form.tampilan.value = eval(jumlah);
+                    }
+                }
+                function hapus(){
+                    document.form.tampilan.value = '';
+                }
+                function kembali(){
+                    var back = document.form.tampilan.value;
+                    document.form.tampilan.value = back.substring(0,back.length-1);
+                }
+            </script>
+
+            <form action="" name="form">
+                <input type="text" name="tampilan">
+            </form>
+
+            <table border='0' cellpadding='3'>
+                <tr>
+                    <td><input type="button" onclick="hapus()" value="C" ></td>
+                    <td><input type="button" onclick="kembali()" value="<<" ></td>
+                    <td colspan="2" ><input type="button" onclick="samaDengan()" value=" = " ></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="hitung(1)" value="1"></td>
+                    <td><input type="button" onclick="hitung(2)" value="2"></td>
+                    <td><input type="button" onclick="hitung(3)" value="3"></td>
+                    <td><input type="button" onclick="hitung('*')" value="X"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="hitung(4)" value="4"></td>
+                    <td><input type="button" onclick="hitung(5)" value="5"></td>
+                    <td><input type="button" onclick="hitung(6)" value="6"></td>
+                    <td><input type="button" onclick="hitung('-')" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="hitung(7)" value="7"></td>
+                    <td><input type="button" onclick="hitung(8)" value="8"></td>
+                    <td><input type="button" onclick="hitung(9)" value="9"></td>
+                    <td><input type="button" onclick="hitung('/')" value="/"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="hitung('+')" value="+"></td>
+                    <td><input type="button" onclick="hitung(0)" value="0"></td>
+                    <td><input type="button" onclick="hitung('%')" value="%"></td>
+
+                </tr>
+
+            </table>
+
+</body>
+</html>
