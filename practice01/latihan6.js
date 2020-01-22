@@ -13,10 +13,21 @@ const switch = 'sssss';
 
 var null = '0000';
 
+var false = 'true';
+let typeof = 'tipe';
+
+ var !people = 'error';
+ var @people = 'error';
+ var #people = 'error';
+ var %people = 'error';
+ var +people = 'error';
+
 let 1andre = 'sasasa';
 
 var ok cs = 'asasa';
 
 const eno-sa= 'jangan';
+
+
 
 // semua program diatas error
